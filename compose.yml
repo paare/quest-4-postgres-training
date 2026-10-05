@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: cupel_training_postgres
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - cupel_training_data:/var/lib/postgresql/data
+
+volumes:
+  cupel_training_data:
