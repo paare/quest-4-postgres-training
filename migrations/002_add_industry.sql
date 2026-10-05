@@ -1,0 +1,2 @@
+ALTER TABLE companies
+ADD COLUMN industry VARCHAR(150);
